@@ -1,0 +1,10 @@
+{
+    "name": "shopzzz",
+    "port": 25565,
+    "token": "discordBotToken",
+    "channelId": "channelId",
+    "loggingChannelId": "channelId",
+    "offlineRole": "roleID",
+    "onlineRole": "roleID",
+    "queueRole": "roldID"
+}
