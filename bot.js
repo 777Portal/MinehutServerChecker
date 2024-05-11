@@ -76,11 +76,11 @@ function pingServer(){
 
     if ( playersOnline == 0 && lastPlayersOnline > 1 ) sendEmbed(channel, 0x000000, `${name} offline!`, "https://exonauto.me/assets/exonauto.png", `${name} is now offline`, "offline", null ,offlineRole);
 
-    if ( playersOnline == 0 && maxPlayers == 0 && lastMaxPlayers !== 0) sendEmbed(channel, 0xFFFF00, `${name} can be rebooted!`, "https://exonauto.me/assets/exonauto.png", "The server can now by manually rebooted by players!","reboot");
+    if ( playersOnline == 0 && maxPlayers == 0 && lastMaxPlayers !== 0) sendEmbed(channel, 0xFFFF00, `${name} can be rebooted!`, "https://exonauto.me/assets/exonauto.png", `${name} can now by manually rebooted by players!`,"reboot");
 
-    if ( playersOnline == 0 && maxPlayers !== 0 && lastMaxPlayers == 0) sendEmbed(channel, 0xFFFF00, `${name} is starting!`, "https://exonauto.me/assets/exonauto.png", "The is currently being rebooted!","reboot");
+    if ( playersOnline == 0 && maxPlayers !== 0 && lastMaxPlayers == 0) sendEmbed(channel, 0xFFFF00, `${name} is starting!`, "https://exonauto.me/assets/exonauto.png", `${name} is currently being rebooted!`,"reboot");
 
-    if ( lastPlayersOnline == 0 && playersOnline > 1 ) sendEmbed(channel, 0x00FF00, `${name} online!`, "https://exonauto.me/assets/exonauto.png", `${name} is now online`, "online", null,  onlineRole);
+    if ( lastPlayersOnline <= 0 && playersOnline >= 1 ) sendEmbed(channel, 0x00FF00, `${name} online!`, "https://exonauto.me/assets/exonauto.png", `${name} is now online`, "online", null,  onlineRole);
   
     if ( playersOnline < maxPlayers && lastPlayersOnline == maxPlayers) sendEmbed(channel, 0xFFFF00, `${name} open!`, "https://exonauto.me/assets/exonauto.png",  `${name} is now under max players! \n${playersOnline} / ${maxPlayers}`,"under max players", null, queueRole);
     
